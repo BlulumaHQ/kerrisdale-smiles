@@ -27,7 +27,7 @@ export type InquiryResult = { status: "delivered" } | { status: "not_configured"
  * UI tells the visitor to call or email instead. Wire a real channel here when approved.
  */
 export const submitInquiry = createServerFn({ method: "POST" })
-  .inputValidator((data: InquiryInput) => inquirySchema.parse(data))
+  .validator((data: InquiryInput) => inquirySchema.parse(data))
   .handler(async ({ data }): Promise<InquiryResult> => {
     // Spam checks: honeypot filled, or submitted faster than a human could.
     if (data.website || Date.now() - data.startedAt < 2500) return { status: "rejected" };

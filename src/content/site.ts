@@ -19,18 +19,18 @@ export const SITE_ORIGIN = "https://joycewudentalvan.ca";
 /** `to` = router path (typed), `path` = exact original public URL (canonical, trailing slash). */
 export const ROUTES = {
   home: { en: { to: "/", path: "/" }, zh: { to: "/zh-hant/", path: "/zh-hant/" } },
-  about: { en: { to: "/about", path: "/about/" }, zh: { to: "/zh-hant/about-cn", path: "/zh-hant/about-cn/" } },
-  team: { en: { to: "/our-team", path: "/our-team/" }, zh: { to: "/zh-hant/our-team-cn", path: "/zh-hant/our-team-cn/" } },
-  general: { en: { to: "/general", path: "/general/" }, zh: { to: "/zh-hant/general-cn", path: "/zh-hant/general-cn/" } },
-  cosmetic: { en: { to: "/cosmetic", path: "/cosmetic/" }, zh: { to: "/zh-hant/cosmetic-cn", path: "/zh-hant/cosmetic-cn/" } },
-  surgical: { en: { to: "/surgical", path: "/surgical/" }, zh: { to: "/zh-hant/surgical-cn", path: "/zh-hant/surgical-cn/" } },
-  implant: { en: { to: "/implant", path: "/implant/" }, zh: { to: "/zh-hant/implant-cn", path: "/zh-hant/implant-cn/" } },
-  faq: { en: { to: "/faq", path: "/faq/" }, zh: { to: "/zh-hant/faq-cn", path: "/zh-hant/faq-cn/" } },
+  about: { en: { to: "/about/", path: "/about/" }, zh: { to: "/zh-hant/about-cn/", path: "/zh-hant/about-cn/" } },
+  team: { en: { to: "/our-team/", path: "/our-team/" }, zh: { to: "/zh-hant/our-team-cn/", path: "/zh-hant/our-team-cn/" } },
+  general: { en: { to: "/general/", path: "/general/" }, zh: { to: "/zh-hant/general-cn/", path: "/zh-hant/general-cn/" } },
+  cosmetic: { en: { to: "/cosmetic/", path: "/cosmetic/" }, zh: { to: "/zh-hant/cosmetic-cn/", path: "/zh-hant/cosmetic-cn/" } },
+  surgical: { en: { to: "/surgical/", path: "/surgical/" }, zh: { to: "/zh-hant/surgical-cn/", path: "/zh-hant/surgical-cn/" } },
+  implant: { en: { to: "/implant/", path: "/implant/" }, zh: { to: "/zh-hant/implant-cn/", path: "/zh-hant/implant-cn/" } },
+  faq: { en: { to: "/faq/", path: "/faq/" }, zh: { to: "/zh-hant/faq-cn/", path: "/zh-hant/faq-cn/" } },
   cdcp: {
-    en: { to: "/canada-dental-care-plan", path: "/canada-dental-care-plan/" },
-    zh: { to: "/zh-hant/canada-dental-care-plan-ch", path: "/zh-hant/canada-dental-care-plan-ch/" },
+    en: { to: "/canada-dental-care-plan/", path: "/canada-dental-care-plan/" },
+    zh: { to: "/zh-hant/canada-dental-care-plan-ch/", path: "/zh-hant/canada-dental-care-plan-ch/" },
   },
-  contact: { en: { to: "/contact", path: "/contact/" }, zh: { to: "/zh-hant/contact-cn", path: "/zh-hant/contact-cn/" } },
+  contact: { en: { to: "/contact/", path: "/contact/" }, zh: { to: "/zh-hant/contact-cn/", path: "/zh-hant/contact-cn/" } },
 } as const;
 
 export const PAGE_KEYS = Object.keys(ROUTES) as PageKey[];

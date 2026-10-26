@@ -17,8 +17,8 @@ const ABOUT = {
         "We accept most dental insurance plans and are happy to help you find out whether treatments are covered by your provider. It is your responsibility to provide us with updated coverage information and any relevant details, such as changes to your plan, recent claims or past treatment that may affect your coverage.",
         "We are happy to submit a predetermination to your plan provider. A predetermination gives you an estimate of what your plan will cover and what you will be responsible for. Please be aware this is not a guarantee of coverage.",
       ],
-      kidsT: "BC Healthy Kids Program (MSP)",
-      kids: "We also accept the BC Healthy Kids Program. A co-payment is required for the fee difference between the 2024 Standard Dental Fee Guide and the 2017 MSP BC Child Fee Guide. You may also apply for the Canadian Dental Benefit yourself to cover the co-payment.",
+      kidsT: "BC Healthy Kids Program (MSH)",
+      kids: "We also accept the BC Healthy Kids Program. A co-payment is required for the fee difference between the 2024 Standard Dental Fee Guide and the 2017 MSH BC Child Fee Guide. You may also apply for the Canadian Dental Benefit yourself to cover the co-payment.",
     },
     cdcp: { t: "Canada Dental Care Plan", d: "Our office gladly accepts the Canada Dental Care Plan (CDCP). To learn about the application process and eligibility, please visit the federal government's Canadian Dental Care Plan page.", link: "CDCP at our clinic", gov: "Government of Canada — CDCP" },
     cancel: {
@@ -39,8 +39,8 @@ const ABOUT = {
         "我們接受大多數牙科保險計劃，並樂意協助您確認治療是否在保險範圍內。您有責任向我們提供最新的保險資料及相關資訊，例如計劃變更、近期索償或可能影響保障的過往治療。",
         "我們可代您向保險公司提交預估申請（predetermination），讓您了解保險計劃將承擔的費用及您需自付的部分。請注意，這並不保證一定獲得保障。",
       ],
-      kidsT: "BC Healthy Kids Program (MSP)",
-      kids: "我們亦接受 BC Healthy Kids Program，但需支付 2024 年標準牙科收費指南與 2017 年 MSP BC 兒童收費指南之間的差額。您亦可自行申請加拿大牙科福利以支付此差額。",
+      kidsT: "BC Healthy Kids Program (MSH)",
+      kids: "我們亦接受 BC Healthy Kids Program，但需支付 2024 年標準牙科收費指南與 2017 年 MSH BC 兒童收費指南之間的差額。您亦可自行申請加拿大牙科福利以支付此差額。",
     },
     cdcp: { t: "加拿大牙科護理計劃", d: "我們診所欣然接受加拿大牙科護理計劃（CDCP）。如欲了解申請程序及資格，請瀏覽聯邦政府的加拿大牙科護理計劃網頁。", link: "本診所的 CDCP 資訊", gov: "加拿大政府 — CDCP（英文）" },
     cancel: {

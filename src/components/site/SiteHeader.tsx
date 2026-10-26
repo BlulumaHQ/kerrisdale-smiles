@@ -65,7 +65,7 @@ function Dropdown({ item, lang, current }: { item: Item; lang: Lang; current: Pa
         aria-controls={id}
         onClick={() => setOpen((o) => !o)}
         className={cn(
-          "flex items-center gap-1 rounded-full px-3 py-2 text-[0.92rem] font-medium transition-colors hover:text-primary",
+          "flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-[0.92rem] font-medium transition-colors hover:text-primary",
           active ? "text-primary" : "text-foreground",
         )}
       >
@@ -120,7 +120,7 @@ export function LangSwitch({ className, dark }: { className?: string; dark?: boo
         }
       }}
       className={cn(
-        "inline-flex min-h-11 items-center gap-1.5 rounded-full border px-3.5 text-sm font-medium transition-colors",
+        "inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-full border px-3.5 text-sm font-medium transition-colors",
         dark ? "border-on-dark/30 text-on-dark hover:bg-on-dark hover:text-primary-deep" : "border-primary/20 text-primary-deep hover:border-primary",
         className,
       )}
@@ -167,10 +167,10 @@ export function SiteHeader() {
         const z = f[f.length - 1];
         if (e.shiftKey && document.activeElement === a) {
           e.preventDefault();
-          z.focus();
+          z?.focus();
         } else if (!e.shiftKey && document.activeElement === z) {
           e.preventDefault();
-          a.focus();
+          a?.focus();
         }
       }
     };
@@ -204,7 +204,7 @@ export function SiteHeader() {
                     to={routeTo(item.key, lang)}
                     aria-current={key === item.key ? "page" : undefined}
                     className={cn(
-                      "block rounded-full px-3 py-2 text-[0.92rem] font-medium transition-colors hover:text-primary",
+                      "block whitespace-nowrap rounded-full px-3 py-2 text-[0.92rem] font-medium transition-colors hover:text-primary",
                       key === item.key ? "text-primary" : "text-foreground",
                     )}
                   >
@@ -222,10 +222,10 @@ export function SiteHeader() {
           <a
             href={CLINIC.phoneHref}
             aria-label={`${ui.call}: ${CLINIC.phoneDisplay}`}
-            className="hidden size-11 items-center justify-center rounded-full border border-primary/20 text-primary-deep transition-colors hover:border-primary hover:bg-surface md:inline-flex xl:w-auto xl:gap-2 xl:px-4"
+            className="hidden size-11 items-center justify-center rounded-full border border-primary/20 text-primary-deep transition-colors hover:border-primary hover:bg-surface md:inline-flex 2xl:w-auto 2xl:gap-2 2xl:px-4"
           >
             <Phone className="size-4" aria-hidden />
-            <span className="hidden text-sm font-medium xl:inline">{CLINIC.phoneDisplay.replace("+1 ", "")}</span>
+            <span className="hidden whitespace-nowrap text-sm font-medium 2xl:inline">{CLINIC.phoneDisplay.replace("+1 ", "")}</span>
           </a>
           <Link to={routeTo("contact", lang)} hash="inquiry" className={cn(buttonStyles({ size: "sm" }), "hidden md:inline-flex")}>
             {ui.request}

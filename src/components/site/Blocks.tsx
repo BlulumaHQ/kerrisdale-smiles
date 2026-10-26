@@ -90,10 +90,10 @@ export function Testimonials({ lang }: { lang: Lang }) {
         <div
           tabIndex={0}
           onKeyDown={onKey}
-          onTouchStart={(e) => setTouchX(e.touches[0].clientX)}
+          onTouchStart={(e) => setTouchX(e.touches[0]?.clientX ?? null)}
           onTouchEnd={(e) => {
             if (touchX === null) return;
-            const dx = e.changedTouches[0].clientX - touchX;
+            const dx = (e.changedTouches[0]?.clientX ?? touchX) - touchX;
             if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
             setTouchX(null);
           }}
@@ -243,7 +243,7 @@ export function ContactDetails({ lang }: { lang: Lang }) {
           </span>
           <span>
             <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">{r.label}</span>
-            <span className="mt-1 block break-all font-medium text-primary-deep group-hover:text-primary">{r.value}</span>
+            <span className="mt-1 block font-medium [overflow-wrap:anywhere] text-primary-deep group-hover:text-primary">{r.value}</span>
           </span>
         </a>
       ))}
@@ -264,7 +264,7 @@ export function MapEmbed({ lang, className }: { lang: Lang; className?: string }
 }
 
 /** Final conversion block: details, hours, map and inquiry form. */
-export function ContactSection({ lang, heading = true, defaultService }: { lang: Lang; heading?: boolean; defaultService?: string }) {
+export function ContactSection({ lang, heading = true, defaultService }: { lang: Lang; heading?: boolean; defaultService?: string | undefined }) {
   const ui = UI[lang];
   const L = lang === "en"
     ? { eyebrow: "Visit Us", title: "Find Us in Kerrisdale", body: "We're on Balsam Street in Kerrisdale, Vancouver. Call, email or send an inquiry to arrange your visit." }

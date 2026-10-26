@@ -10,33 +10,311 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CanadaDentalCarePlanRouteImport } from './routes/canada-dental-care-plan'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CosmeticRouteImport } from './routes/cosmetic'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GeneralRouteImport } from './routes/general'
+import { Route as ImplantRouteImport } from './routes/implant'
+import { Route as OurTeamRouteImport } from './routes/our-team'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SurgicalRouteImport } from './routes/surgical'
+import { Route as ZhHantIndexRouteImport } from './routes/zh-hant/index'
+import { Route as ZhHantAboutCnRouteImport } from './routes/zh-hant/about-cn'
+import { Route as ZhHantCanadaDentalCarePlanChRouteImport } from './routes/zh-hant/canada-dental-care-plan-ch'
+import { Route as ZhHantContactCnRouteImport } from './routes/zh-hant/contact-cn'
+import { Route as ZhHantCosmeticCnRouteImport } from './routes/zh-hant/cosmetic-cn'
+import { Route as ZhHantFaqCnRouteImport } from './routes/zh-hant/faq-cn'
+import { Route as ZhHantGeneralCnRouteImport } from './routes/zh-hant/general-cn'
+import { Route as ZhHantImplantCnRouteImport } from './routes/zh-hant/implant-cn'
+import { Route as ZhHantOurTeamCnRouteImport } from './routes/zh-hant/our-team-cn'
+import { Route as ZhHantSurgicalCnRouteImport } from './routes/zh-hant/surgical-cn'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CanadaDentalCarePlanRoute = CanadaDentalCarePlanRouteImport.update({
+  id: '/canada-dental-care-plan',
+  path: '/canada-dental-care-plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CosmeticRoute = CosmeticRouteImport.update({
+  id: '/cosmetic',
+  path: '/cosmetic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GeneralRoute = GeneralRouteImport.update({
+  id: '/general',
+  path: '/general',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImplantRoute = ImplantRouteImport.update({
+  id: '/implant',
+  path: '/implant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurTeamRoute = OurTeamRouteImport.update({
+  id: '/our-team',
+  path: '/our-team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SurgicalRoute = SurgicalRouteImport.update({
+  id: '/surgical',
+  path: '/surgical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantIndexRoute = ZhHantIndexRouteImport.update({
+  id: '/zh-hant/',
+  path: '/zh-hant/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantAboutCnRoute = ZhHantAboutCnRouteImport.update({
+  id: '/zh-hant/about-cn',
+  path: '/zh-hant/about-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantCanadaDentalCarePlanChRoute =
+  ZhHantCanadaDentalCarePlanChRouteImport.update({
+    id: '/zh-hant/canada-dental-care-plan-ch',
+    path: '/zh-hant/canada-dental-care-plan-ch',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ZhHantContactCnRoute = ZhHantContactCnRouteImport.update({
+  id: '/zh-hant/contact-cn',
+  path: '/zh-hant/contact-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantCosmeticCnRoute = ZhHantCosmeticCnRouteImport.update({
+  id: '/zh-hant/cosmetic-cn',
+  path: '/zh-hant/cosmetic-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantFaqCnRoute = ZhHantFaqCnRouteImport.update({
+  id: '/zh-hant/faq-cn',
+  path: '/zh-hant/faq-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantGeneralCnRoute = ZhHantGeneralCnRouteImport.update({
+  id: '/zh-hant/general-cn',
+  path: '/zh-hant/general-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantImplantCnRoute = ZhHantImplantCnRouteImport.update({
+  id: '/zh-hant/implant-cn',
+  path: '/zh-hant/implant-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantOurTeamCnRoute = ZhHantOurTeamCnRouteImport.update({
+  id: '/zh-hant/our-team-cn',
+  path: '/zh-hant/our-team-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhHantSurgicalCnRoute = ZhHantSurgicalCnRouteImport.update({
+  id: '/zh-hant/surgical-cn',
+  path: '/zh-hant/surgical-cn',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/canada-dental-care-plan': typeof CanadaDentalCarePlanRoute
+  '/contact': typeof ContactRoute
+  '/cosmetic': typeof CosmeticRoute
+  '/faq': typeof FaqRoute
+  '/general': typeof GeneralRoute
+  '/implant': typeof ImplantRoute
+  '/our-team': typeof OurTeamRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/surgical': typeof SurgicalRoute
+  '/zh-hant/about-cn': typeof ZhHantAboutCnRoute
+  '/zh-hant/canada-dental-care-plan-ch': typeof ZhHantCanadaDentalCarePlanChRoute
+  '/zh-hant/contact-cn': typeof ZhHantContactCnRoute
+  '/zh-hant/cosmetic-cn': typeof ZhHantCosmeticCnRoute
+  '/zh-hant/faq-cn': typeof ZhHantFaqCnRoute
+  '/zh-hant/general-cn': typeof ZhHantGeneralCnRoute
+  '/zh-hant/implant-cn': typeof ZhHantImplantCnRoute
+  '/zh-hant/our-team-cn': typeof ZhHantOurTeamCnRoute
+  '/zh-hant/surgical-cn': typeof ZhHantSurgicalCnRoute
+  '/zh-hant/': typeof ZhHantIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/canada-dental-care-plan': typeof CanadaDentalCarePlanRoute
+  '/contact': typeof ContactRoute
+  '/cosmetic': typeof CosmeticRoute
+  '/faq': typeof FaqRoute
+  '/general': typeof GeneralRoute
+  '/implant': typeof ImplantRoute
+  '/our-team': typeof OurTeamRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/surgical': typeof SurgicalRoute
+  '/zh-hant/about-cn': typeof ZhHantAboutCnRoute
+  '/zh-hant/canada-dental-care-plan-ch': typeof ZhHantCanadaDentalCarePlanChRoute
+  '/zh-hant/contact-cn': typeof ZhHantContactCnRoute
+  '/zh-hant/cosmetic-cn': typeof ZhHantCosmeticCnRoute
+  '/zh-hant/faq-cn': typeof ZhHantFaqCnRoute
+  '/zh-hant/general-cn': typeof ZhHantGeneralCnRoute
+  '/zh-hant/implant-cn': typeof ZhHantImplantCnRoute
+  '/zh-hant/our-team-cn': typeof ZhHantOurTeamCnRoute
+  '/zh-hant/surgical-cn': typeof ZhHantSurgicalCnRoute
+  '/zh-hant': typeof ZhHantIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/canada-dental-care-plan': typeof CanadaDentalCarePlanRoute
+  '/contact': typeof ContactRoute
+  '/cosmetic': typeof CosmeticRoute
+  '/faq': typeof FaqRoute
+  '/general': typeof GeneralRoute
+  '/implant': typeof ImplantRoute
+  '/our-team': typeof OurTeamRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/surgical': typeof SurgicalRoute
+  '/zh-hant/about-cn': typeof ZhHantAboutCnRoute
+  '/zh-hant/canada-dental-care-plan-ch': typeof ZhHantCanadaDentalCarePlanChRoute
+  '/zh-hant/contact-cn': typeof ZhHantContactCnRoute
+  '/zh-hant/cosmetic-cn': typeof ZhHantCosmeticCnRoute
+  '/zh-hant/faq-cn': typeof ZhHantFaqCnRoute
+  '/zh-hant/general-cn': typeof ZhHantGeneralCnRoute
+  '/zh-hant/implant-cn': typeof ZhHantImplantCnRoute
+  '/zh-hant/our-team-cn': typeof ZhHantOurTeamCnRoute
+  '/zh-hant/surgical-cn': typeof ZhHantSurgicalCnRoute
+  '/zh-hant/': typeof ZhHantIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/canada-dental-care-plan'
+    | '/contact'
+    | '/cosmetic'
+    | '/faq'
+    | '/general'
+    | '/implant'
+    | '/our-team'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/surgical'
+    | '/zh-hant/about-cn'
+    | '/zh-hant/canada-dental-care-plan-ch'
+    | '/zh-hant/contact-cn'
+    | '/zh-hant/cosmetic-cn'
+    | '/zh-hant/faq-cn'
+    | '/zh-hant/general-cn'
+    | '/zh-hant/implant-cn'
+    | '/zh-hant/our-team-cn'
+    | '/zh-hant/surgical-cn'
+    | '/zh-hant/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/canada-dental-care-plan'
+    | '/contact'
+    | '/cosmetic'
+    | '/faq'
+    | '/general'
+    | '/implant'
+    | '/our-team'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/surgical'
+    | '/zh-hant/about-cn'
+    | '/zh-hant/canada-dental-care-plan-ch'
+    | '/zh-hant/contact-cn'
+    | '/zh-hant/cosmetic-cn'
+    | '/zh-hant/faq-cn'
+    | '/zh-hant/general-cn'
+    | '/zh-hant/implant-cn'
+    | '/zh-hant/our-team-cn'
+    | '/zh-hant/surgical-cn'
+    | '/zh-hant'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/canada-dental-care-plan'
+    | '/contact'
+    | '/cosmetic'
+    | '/faq'
+    | '/general'
+    | '/implant'
+    | '/our-team'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/surgical'
+    | '/zh-hant/about-cn'
+    | '/zh-hant/canada-dental-care-plan-ch'
+    | '/zh-hant/contact-cn'
+    | '/zh-hant/cosmetic-cn'
+    | '/zh-hant/faq-cn'
+    | '/zh-hant/general-cn'
+    | '/zh-hant/implant-cn'
+    | '/zh-hant/our-team-cn'
+    | '/zh-hant/surgical-cn'
+    | '/zh-hant/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CanadaDentalCarePlanRoute: typeof CanadaDentalCarePlanRoute
+  ContactRoute: typeof ContactRoute
+  CosmeticRoute: typeof CosmeticRoute
+  FaqRoute: typeof FaqRoute
+  GeneralRoute: typeof GeneralRoute
+  ImplantRoute: typeof ImplantRoute
+  OurTeamRoute: typeof OurTeamRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SurgicalRoute: typeof SurgicalRoute
+  ZhHantAboutCnRoute: typeof ZhHantAboutCnRoute
+  ZhHantCanadaDentalCarePlanChRoute: typeof ZhHantCanadaDentalCarePlanChRoute
+  ZhHantContactCnRoute: typeof ZhHantContactCnRoute
+  ZhHantCosmeticCnRoute: typeof ZhHantCosmeticCnRoute
+  ZhHantFaqCnRoute: typeof ZhHantFaqCnRoute
+  ZhHantGeneralCnRoute: typeof ZhHantGeneralCnRoute
+  ZhHantImplantCnRoute: typeof ZhHantImplantCnRoute
+  ZhHantOurTeamCnRoute: typeof ZhHantOurTeamCnRoute
+  ZhHantSurgicalCnRoute: typeof ZhHantSurgicalCnRoute
+  ZhHantIndexRoute: typeof ZhHantIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +326,179 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/canada-dental-care-plan': {
+      id: '/canada-dental-care-plan'
+      path: '/canada-dental-care-plan'
+      fullPath: '/canada-dental-care-plan'
+      preLoaderRoute: typeof CanadaDentalCarePlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cosmetic': {
+      id: '/cosmetic'
+      path: '/cosmetic'
+      fullPath: '/cosmetic'
+      preLoaderRoute: typeof CosmeticRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/general': {
+      id: '/general'
+      path: '/general'
+      fullPath: '/general'
+      preLoaderRoute: typeof GeneralRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/implant': {
+      id: '/implant'
+      path: '/implant'
+      fullPath: '/implant'
+      preLoaderRoute: typeof ImplantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-team': {
+      id: '/our-team'
+      path: '/our-team'
+      fullPath: '/our-team'
+      preLoaderRoute: typeof OurTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surgical': {
+      id: '/surgical'
+      path: '/surgical'
+      fullPath: '/surgical'
+      preLoaderRoute: typeof SurgicalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/': {
+      id: '/zh-hant/'
+      path: '/zh-hant'
+      fullPath: '/zh-hant/'
+      preLoaderRoute: typeof ZhHantIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/about-cn': {
+      id: '/zh-hant/about-cn'
+      path: '/zh-hant/about-cn'
+      fullPath: '/zh-hant/about-cn'
+      preLoaderRoute: typeof ZhHantAboutCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/canada-dental-care-plan-ch': {
+      id: '/zh-hant/canada-dental-care-plan-ch'
+      path: '/zh-hant/canada-dental-care-plan-ch'
+      fullPath: '/zh-hant/canada-dental-care-plan-ch'
+      preLoaderRoute: typeof ZhHantCanadaDentalCarePlanChRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/contact-cn': {
+      id: '/zh-hant/contact-cn'
+      path: '/zh-hant/contact-cn'
+      fullPath: '/zh-hant/contact-cn'
+      preLoaderRoute: typeof ZhHantContactCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/cosmetic-cn': {
+      id: '/zh-hant/cosmetic-cn'
+      path: '/zh-hant/cosmetic-cn'
+      fullPath: '/zh-hant/cosmetic-cn'
+      preLoaderRoute: typeof ZhHantCosmeticCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/faq-cn': {
+      id: '/zh-hant/faq-cn'
+      path: '/zh-hant/faq-cn'
+      fullPath: '/zh-hant/faq-cn'
+      preLoaderRoute: typeof ZhHantFaqCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/general-cn': {
+      id: '/zh-hant/general-cn'
+      path: '/zh-hant/general-cn'
+      fullPath: '/zh-hant/general-cn'
+      preLoaderRoute: typeof ZhHantGeneralCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/implant-cn': {
+      id: '/zh-hant/implant-cn'
+      path: '/zh-hant/implant-cn'
+      fullPath: '/zh-hant/implant-cn'
+      preLoaderRoute: typeof ZhHantImplantCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/our-team-cn': {
+      id: '/zh-hant/our-team-cn'
+      path: '/zh-hant/our-team-cn'
+      fullPath: '/zh-hant/our-team-cn'
+      preLoaderRoute: typeof ZhHantOurTeamCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh-hant/surgical-cn': {
+      id: '/zh-hant/surgical-cn'
+      path: '/zh-hant/surgical-cn'
+      fullPath: '/zh-hant/surgical-cn'
+      preLoaderRoute: typeof ZhHantSurgicalCnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CanadaDentalCarePlanRoute: CanadaDentalCarePlanRoute,
+  ContactRoute: ContactRoute,
+  CosmeticRoute: CosmeticRoute,
+  FaqRoute: FaqRoute,
+  GeneralRoute: GeneralRoute,
+  ImplantRoute: ImplantRoute,
+  OurTeamRoute: OurTeamRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SurgicalRoute: SurgicalRoute,
+  ZhHantAboutCnRoute: ZhHantAboutCnRoute,
+  ZhHantCanadaDentalCarePlanChRoute: ZhHantCanadaDentalCarePlanChRoute,
+  ZhHantContactCnRoute: ZhHantContactCnRoute,
+  ZhHantCosmeticCnRoute: ZhHantCosmeticCnRoute,
+  ZhHantFaqCnRoute: ZhHantFaqCnRoute,
+  ZhHantGeneralCnRoute: ZhHantGeneralCnRoute,
+  ZhHantImplantCnRoute: ZhHantImplantCnRoute,
+  ZhHantOurTeamCnRoute: ZhHantOurTeamCnRoute,
+  ZhHantSurgicalCnRoute: ZhHantSurgicalCnRoute,
+  ZhHantIndexRoute: ZhHantIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -5,7 +5,7 @@ import { CLINIC, HOURS, ROUTES, SITE_ORIGIN, UI, type Lang, type PageKey } from 
  * Indexing is OFF unless VITE_SITE_INDEXABLE === "true" (set only for the production
  * joycewudentalvan.ca build). Preview/staging builds therefore emit noindex.
  */
-export const INDEXABLE = import.meta.env.VITE_SITE_INDEXABLE === "true";
+export const INDEXABLE = import.meta.env["VITE_SITE_INDEXABLE"] === "true";
 
 const OG_IMAGE = `${SITE_ORIGIN}/images/og-joyce-wu-dental.jpg`;
 

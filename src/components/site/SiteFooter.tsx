@@ -13,8 +13,8 @@ export function SiteFooter() {
   return (
     <footer className="bg-primary-deep text-on-dark">
       <div className="container-page py-16 md:py-20">
-        <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-[minmax(0,1.1fr)_auto_auto_auto] xl:gap-x-16">
-          <div className="max-w-sm xl:mr-[200px] xl:max-w-xs">
+        <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-[minmax(260px,1fr)_auto_auto_auto] xl:gap-x-14">
+          <div className="max-w-sm 2xl:mr-[200px]">
             <Logo dark />
             <p className="mt-6 text-sm leading-relaxed text-on-dark-muted">{ui.footerAbout}</p>
             <div className="mt-6">

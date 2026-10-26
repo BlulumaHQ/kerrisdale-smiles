@@ -59,7 +59,7 @@ type Field = "name" | "email" | "phone" | "service" | "consent";
 const inputCls =
   "mt-2 block w-full rounded-lg border border-input bg-surface px-4 py-3 text-[0.95rem] text-foreground transition-colors placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 aria-[invalid=true]:border-destructive";
 
-export function InquiryForm({ lang, defaultService }: { lang: Lang; defaultService?: string }) {
+export function InquiryForm({ lang, defaultService }: { lang: Lang; defaultService?: string | undefined }) {
   const t = T[lang];
   const startedAt = useRef(Date.now());
   const [errors, setErrors] = useState<Partial<Record<Field, string>>>({});

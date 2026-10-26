@@ -167,10 +167,10 @@ export function SiteHeader() {
         const z = f[f.length - 1];
         if (e.shiftKey && document.activeElement === a) {
           e.preventDefault();
-          z.focus();
+          z?.focus();
         } else if (!e.shiftKey && document.activeElement === z) {
           e.preventDefault();
-          a.focus();
+          a?.focus();
         }
       }
     };

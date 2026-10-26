@@ -243,7 +243,7 @@ export function ContactDetails({ lang }: { lang: Lang }) {
           </span>
           <span>
             <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">{r.label}</span>
-            <span className="mt-1 block break-all font-medium text-primary-deep group-hover:text-primary">{r.value}</span>
+            <span className="mt-1 block font-medium [overflow-wrap:anywhere] text-primary-deep group-hover:text-primary">{r.value}</span>
           </span>
         </a>
       ))}

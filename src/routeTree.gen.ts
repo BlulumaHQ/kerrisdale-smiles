@@ -18,6 +18,8 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GeneralRouteImport } from './routes/general'
 import { Route as ImplantRouteImport } from './routes/implant'
 import { Route as OurTeamRouteImport } from './routes/our-team'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SurgicalRouteImport } from './routes/surgical'
 import { Route as ZhHantIndexRouteImport } from './routes/zh-hant/index'
 import { Route as ZhHantAboutCnRouteImport } from './routes/zh-hant/about-cn'
@@ -73,6 +75,16 @@ const ImplantRoute = ImplantRouteImport.update({
 const OurTeamRoute = OurTeamRouteImport.update({
   id: '/our-team',
   path: '/our-team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SurgicalRoute = SurgicalRouteImport.update({
@@ -142,6 +154,8 @@ export interface FileRoutesByFullPath {
   '/general': typeof GeneralRoute
   '/implant': typeof ImplantRoute
   '/our-team': typeof OurTeamRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/surgical': typeof SurgicalRoute
   '/zh-hant/about-cn': typeof ZhHantAboutCnRoute
   '/zh-hant/canada-dental-care-plan-ch': typeof ZhHantCanadaDentalCarePlanChRoute
@@ -164,6 +178,8 @@ export interface FileRoutesByTo {
   '/general': typeof GeneralRoute
   '/implant': typeof ImplantRoute
   '/our-team': typeof OurTeamRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/surgical': typeof SurgicalRoute
   '/zh-hant/about-cn': typeof ZhHantAboutCnRoute
   '/zh-hant/canada-dental-care-plan-ch': typeof ZhHantCanadaDentalCarePlanChRoute
@@ -187,6 +203,8 @@ export interface FileRoutesById {
   '/general': typeof GeneralRoute
   '/implant': typeof ImplantRoute
   '/our-team': typeof OurTeamRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/surgical': typeof SurgicalRoute
   '/zh-hant/about-cn': typeof ZhHantAboutCnRoute
   '/zh-hant/canada-dental-care-plan-ch': typeof ZhHantCanadaDentalCarePlanChRoute
@@ -211,6 +229,8 @@ export interface FileRouteTypes {
     | '/general'
     | '/implant'
     | '/our-team'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/surgical'
     | '/zh-hant/about-cn'
     | '/zh-hant/canada-dental-care-plan-ch'
@@ -233,6 +253,8 @@ export interface FileRouteTypes {
     | '/general'
     | '/implant'
     | '/our-team'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/surgical'
     | '/zh-hant/about-cn'
     | '/zh-hant/canada-dental-care-plan-ch'
@@ -255,6 +277,8 @@ export interface FileRouteTypes {
     | '/general'
     | '/implant'
     | '/our-team'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/surgical'
     | '/zh-hant/about-cn'
     | '/zh-hant/canada-dental-care-plan-ch'
@@ -278,6 +302,8 @@ export interface RootRouteChildren {
   GeneralRoute: typeof GeneralRoute
   ImplantRoute: typeof ImplantRoute
   OurTeamRoute: typeof OurTeamRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SurgicalRoute: typeof SurgicalRoute
   ZhHantAboutCnRoute: typeof ZhHantAboutCnRoute
   ZhHantCanadaDentalCarePlanChRoute: typeof ZhHantCanadaDentalCarePlanChRoute
@@ -354,6 +380,20 @@ declare module '@tanstack/react-router' {
       path: '/our-team'
       fullPath: '/our-team'
       preLoaderRoute: typeof OurTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/surgical': {
@@ -446,6 +486,8 @@ const rootRouteChildren: RootRouteChildren = {
   GeneralRoute: GeneralRoute,
   ImplantRoute: ImplantRoute,
   OurTeamRoute: OurTeamRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SurgicalRoute: SurgicalRoute,
   ZhHantAboutCnRoute: ZhHantAboutCnRoute,
   ZhHantCanadaDentalCarePlanChRoute: ZhHantCanadaDentalCarePlanChRoute,

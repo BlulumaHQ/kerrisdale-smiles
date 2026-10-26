@@ -150,7 +150,7 @@ export function TeamPage({ lang }: { lang: Lang }) {
           <ul className="grid grid-cols-1 gap-8 min-[480px]:grid-cols-2 lg:grid-cols-4">
             {DOCTORS.map((d) => (
               <li key={d.name} className="flex flex-col overflow-hidden rounded-2xl border bg-surface">
-                <img src={d.image} alt={`${d.name}, ${d.designation}`} width={370} height={370} loading="lazy" className="aspect-square w-full object-cover" />
+                <img src={d.image} alt={`${d.name}, ${d.designation}`} width={800} height={800} loading="lazy" className="aspect-square w-full object-cover" />
                 <div className="flex flex-1 flex-col p-6">
                   <h2 className="font-display text-xl font-semibold">{d.name}</h2>
                   <p className="mt-1 text-sm font-medium tracking-wide text-champagne-ink">{d.designation}</p>

@@ -216,7 +216,7 @@ export function HomePage({ lang }: { lang: Lang }) {
               <li key={d.name}>
                 <Link to={routeTo("team", lang)} className="group flex h-full flex-col overflow-hidden rounded-2xl border bg-surface transition-shadow hover:shadow-lift">
                   <div className="aspect-square overflow-hidden bg-muted">
-                    <img src={d.image} alt={`${d.name}, ${d.designation}`} width={370} height={370} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                    <img src={d.image} alt={`${d.name}, ${d.designation}`} width={800} height={800} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <h3 className="font-display text-lg font-semibold">{d.name}</h3>

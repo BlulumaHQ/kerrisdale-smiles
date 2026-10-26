@@ -4,6 +4,5 @@ import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/cosmetic")({
   head: () => pageHead("cosmetic", "en"),
-  staticData: { sitemap: true },
   component: () => <ServicePage lang="en" service="cosmetic" />,
 });

@@ -4,6 +4,5 @@ import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => pageHead("home", "en"),
-  staticData: { sitemap: true },
   component: () => <HomePage lang="en" />,
 });

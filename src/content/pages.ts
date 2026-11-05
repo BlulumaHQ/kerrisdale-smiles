@@ -4,6 +4,62 @@ import type { Lang, PageKey, ServiceKey } from "./site";
 
 export type Meta = { title: string; description: string; h1: string; intro: string };
 
+export const FINDER_OPTIONS = ["general", "cosmetic", "implant", "surgical"] as const satisfies readonly ServiceKey[];
+export const FIRST_VISIT_STEPS = ["contact", "confirm", "prepare", "visit"] as const;
+
+export const PATIENT_INTERACTIONS = {
+  en: {
+    finder: {
+      eyebrow: "FIND YOUR DENTAL CARE", title: "What brings you here today?",
+      description: "Explore our dental services based on what you're looking for. Select a topic to learn more about the care available at our clinic.",
+      explore: "Explore This Service", contact: "Contact Our Clinic",
+      disclaimer: "This guide is for general service information only and does not provide a diagnosis or treatment recommendation.",
+      options: {
+        general: { label: "Routine Checkup & Cleaning", title: "General Dentistry", description: "Learn about routine dental care, professional cleanings, fillings, crowns, and other general dental services." },
+        cosmetic: { label: "Improve My Smile", title: "Cosmetic Dentistry", description: "Explore cosmetic dental services such as teeth whitening, orthodontic treatment, and other smile-enhancing options offered by our clinic." },
+        implant: { label: "Replace Missing Teeth", title: "Dental Implants", description: "Learn about dental implants and the consultation process for patients considering tooth replacement options." },
+        surgical: { label: "Surgical Dental Care", title: "Surgical Dentistry", description: "Explore information about periodontal procedures, wisdom tooth extraction, and other surgical dental services available at our clinic." },
+      },
+    },
+    journey: {
+      eyebrow: "YOUR FIRST VISIT", title: "Getting Started Is Simple",
+      description: "New to our clinic? Here's a simple overview of how to get in touch and prepare for your first dental visit.",
+      question: "Questions Before Your First Visit?", contact: "Contact Our Clinic",
+      steps: {
+        contact: { title: "Get in Touch", description: "Contact our clinic by phone or through the existing website inquiry options to discuss your appointment needs." },
+        confirm: { title: "Confirm Your Appointment", description: "Our team can help you with appointment-related questions and provide confirmation of your visit through the clinic's existing scheduling process. Submitting a website inquiry does not confirm an appointment." },
+        prepare: { title: "Prepare for Your Visit", description: "Before your visit, you may wish to have your dental insurance information and relevant questions ready. Contact the clinic if you need guidance on what to bring." },
+        visit: { title: "Visit Our Clinic", description: "Visit our Kerrisdale location at your confirmed appointment time. Our team will assist you with the next steps of your visit." },
+      },
+    },
+  },
+  zh: {
+    finder: {
+      eyebrow: "探索牙科服務", title: "今天想了解哪方面的牙科服務？",
+      description: "根據您的需求探索診所提供的牙科服務。選擇感興趣的項目，即可進一步了解相關服務內容。",
+      explore: "了解這項服務", contact: "聯絡診所",
+      disclaimer: "本導覽僅供了解一般牙科服務，不構成醫療診斷或個人治療建議。",
+      options: {
+        general: { label: "定期檢查與洗牙", title: "一般牙科", description: "了解定期牙齒檢查、專業洗牙、補牙、牙冠及其他一般牙科服務。" },
+        cosmetic: { label: "改善笑容與牙齒外觀", title: "美容牙科", description: "探索牙齒美白、牙齒矯正及診所提供的其他美容牙科服務。" },
+        implant: { label: "了解缺牙重建方式", title: "植牙服務", description: "了解植牙療程及缺牙患者可進一步諮詢的相關資訊。" },
+        surgical: { label: "了解牙科手術服務", title: "牙科手術", description: "了解牙周治療、智慧齒拔除，以及診所提供的其他牙科手術服務。" },
+      },
+    },
+    journey: {
+      eyebrow: "初診指南", title: "輕鬆開始您的首次看診",
+      description: "第一次來到我們的診所嗎？透過以下簡單步驟，了解如何聯絡診所並為首次看診做好準備。",
+      question: "首次看診前有任何疑問嗎？", contact: "聯絡診所",
+      steps: {
+        contact: { title: "聯絡診所", description: "您可以透過電話或網站現有的聯絡方式，向診所詢問預約及看診相關事項。" },
+        confirm: { title: "確認看診安排", description: "診所團隊可協助解答預約相關問題，並透過診所現有的預約流程確認看診安排。提交網站查詢並不代表已確認預約。" },
+        prepare: { title: "準備看診", description: "看診前可先準備牙科保險資料及想詢問的問題。如不確定需要攜帶哪些資料，歡迎事先聯絡診所確認。" },
+        visit: { title: "前往診所", description: "依照確認的預約時間前往 Kerrisdale 診所，團隊將協助您了解接下來的看診流程。" },
+      },
+    },
+  },
+} as const;
+
 export const META: Record<PageKey, Record<Lang, Meta>> = {
   home: {
     en: {

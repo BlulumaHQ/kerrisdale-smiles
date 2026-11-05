@@ -5,6 +5,8 @@ import { DOCTORS, routeTo, SERVICE_KEYS, UI, type Lang } from "@/content/site";
 import { buttonStyles } from "@/components/site/Button";
 import { ContactSection, FaqList, SectionHeading, Testimonials } from "@/components/site/Blocks";
 import { cn } from "@/lib/utils";
+import { DentalServiceFinder } from "@/components/site/DentalServiceFinder";
+import { FirstVisitJourney } from "@/components/site/FirstVisitJourney";
 
 const C = {
   en: {
@@ -149,6 +151,8 @@ export function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      <DentalServiceFinder key={`finder-${lang}`} lang={lang} />
+
       {/* Services */}
       <section id="services" className="scroll-mt-24 bg-surface py-20 md:py-28">
         <div className="container-page">
@@ -230,8 +234,8 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* New patients */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="container-page grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <FirstVisitJourney key={`journey-${lang}`} lang={lang}>
+        <div className="mt-12 grid gap-8 border-t border-primary/20 pt-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <SectionHeading eyebrow={c.npEyebrow} title={c.npTitle} />
             <div className="mt-8 flex flex-wrap gap-3">
@@ -245,7 +249,7 @@ export function HomePage({ lang }: { lang: Lang }) {
           </div>
           <ol className="grid gap-5 sm:grid-cols-2">
             {c.np.map((n, i) => (
-              <li key={n.t} className="rounded-2xl bg-surface p-7">
+              <li key={n.t} className="border-l border-primary/20 pl-5">
                 <span className="font-display text-3xl font-light text-champagne-ink">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-3 font-display text-lg font-semibold">{n.t}</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">{n.d}</p>
@@ -253,7 +257,7 @@ export function HomePage({ lang }: { lang: Lang }) {
             ))}
           </ol>
         </div>
-      </section>
+      </FirstVisitJourney>
 
       <Testimonials lang={lang} />
 

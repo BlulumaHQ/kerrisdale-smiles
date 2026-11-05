@@ -18,3 +18,4 @@
 - Indexing is off unless `VITE_SITE_INDEXABLE=true`; `robots.txt` is a server route that only allows crawling on the joycewudentalvan.ca host. Why: keep preview builds out of search.
 - Factual clinic content must come from the source site; never invent credentials, prices, ratings or outcomes. Why: real healthcare business.
 - The inquiry form's server function has no delivery channel until the clinic approves one; it must never report fake success. Why: no lost patient inquiries.
+- Homepage patient navigation uses reusable local-state tab components; bilingual interaction copy stays in `src/content/pages.ts` and destinations use `routeTo`. Why: accessible interaction without new URLs, services or backend dependencies.

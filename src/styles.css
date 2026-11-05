@@ -229,6 +229,17 @@
   }
 }
 
+@utility interaction-reveal {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: interaction-reveal 250ms ease-out both;
+  }
+}
+
+@keyframes interaction-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

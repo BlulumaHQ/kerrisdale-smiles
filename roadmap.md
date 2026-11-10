@@ -1,3 +1,11 @@
+# Domain-aware indexing
+
+- [x] Add conditional noindex to platform-host HTML without changing access, content or custom-domain responses.
+- [x] Allow crawler access in platform robots.txt and preserve production canonicals/sitemap.
+- [x] Test platform/custom host behavior and inspect available public HTTP responses.
+
+QA: 52 tests passed; latest build OK. Public preview auth responses were verified with platform-supplied noindex. The unpublished primary host returns a platform-controlled 404 that application code cannot tag; deployment is required before app-generated public HTML can be verified. No custom domain or workers.dev/pages.dev/netlify.app deployment is connected; those behaviors are code-tested only.
+
 # Homepage interactions
 
 - [x] Add bilingual Dental Service Finder after the introduction.

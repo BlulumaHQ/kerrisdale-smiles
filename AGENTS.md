@@ -15,7 +15,7 @@
 - Bilingual route pairs, clinic facts, hours and navigation live only in `src/content/site.ts`; page copy lives in `src/content/pages.ts`. Why: one source of truth for both languages.
 - Language is derived from the URL (`useCurrentPage`), never from client state. Why: crawlable, direct-loadable language pages.
 - Each route file only calls `pageHead(key, lang)` and renders a shared page component. Why: consistent canonical/hreflang/JSON-LD.
-- Indexing is off unless `VITE_SITE_INDEXABLE=true`; `robots.txt` is a server route that only allows crawling on the joycewudentalvan.ca host. Why: keep preview builds out of search.
+- HTML on `lovable.app`, `workers.dev`, `pages.dev` and `netlify.app` hosts gets conditional `X-Robots-Tag: noindex`; their `robots.txt` allows crawling, while custom domains retain index-follow metadata and the production canonical/sitemap. Why: keep platform previews out of search without blocking custom-domain indexing.
 - Factual clinic content must come from the source site; never invent credentials, prices, ratings or outcomes. Why: real healthcare business.
 - The inquiry form's server function has no delivery channel until the clinic approves one; it must never report fake success. Why: no lost patient inquiries.
 - Homepage patient navigation uses reusable local-state tab components; bilingual interaction copy stays in `src/content/pages.ts` and destinations use `routeTo`. Why: accessible interaction without new URLs, services or backend dependencies.

@@ -1,12 +1,8 @@
 import { META } from "@/content/pages";
 import { CLINIC, HOURS, ROUTES, SITE_ORIGIN, UI, type Lang, type PageKey } from "@/content/site";
 
-/**
- * Indexing is OFF unless VITE_SITE_INDEXABLE === "true" (set only for the production
- * joycewudentalvan.ca build). Preview/staging builds therefore emit noindex.
- */
-export const INDEXABLE = import.meta.env["VITE_SITE_INDEXABLE"] === "true";
-
+// Platform hosts are excluded by the serving layer's conditional X-Robots-Tag.
+// Keeping HTML index-follow avoids leaking preview noindex rules to custom domains.
 const OG_IMAGE = `${SITE_ORIGIN}/images/og-joyce-wu-dental.jpg`;
 
 export function dentistJsonLd() {

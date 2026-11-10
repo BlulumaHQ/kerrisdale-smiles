@@ -1,3 +1,9 @@
+# Domain-aware indexing
+
+- [ ] Add conditional noindex to platform-host HTML without changing access, content or custom-domain responses.
+- [ ] Allow crawler access in platform robots.txt and preserve production canonicals/sitemap.
+- [ ] Test platform/custom host behavior and inspect available public HTTP responses.
+
 # Homepage interactions
 
 - [x] Add bilingual Dental Service Finder after the introduction.

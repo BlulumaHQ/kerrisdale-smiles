@@ -74,7 +74,7 @@ export function pageHead(key: PageKey, lang: Lang) {
     meta: [
       { title: m.title },
       { name: "description", content: m.description },
-      { name: "robots", content: INDEXABLE ? "index, follow, max-image-preview:large" : "noindex, nofollow" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: key === "home" ? "website" : "article" },
       { property: "og:site_name", content: CLINIC.name },
       { property: "og:locale", content: lang === "en" ? "en_CA" : "zh_TW" },

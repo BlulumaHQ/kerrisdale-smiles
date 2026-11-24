@@ -6,11 +6,11 @@ import { buttonStyles } from "@/components/site/Button";
 import { CtaBand, PageHeader } from "@/components/site/Blocks";
 import { cn } from "@/lib/utils";
 
-const HERO: Record<ServiceKey, string> = {
-  general: "/images/clinic-treatment-room.webp",
-  cosmetic: "/images/clinic-waiting-area.webp",
-  surgical: "/images/clinic-treatment-room-map.webp",
-  implant: "/images/clinic-front-desk.webp",
+const HERO: Record<ServiceKey, { src: string; w: number; h: number; alt: Record<Lang, string> }> = {
+  general: { src: "/images/service-general-consultation.webp", w: 1600, h: 900, alt: { en: "Dentist matching tooth shade with a smiling patient, with a bridge model on screen", zh: "牙醫為微笑的病人比對牙齒顏色，螢幕上顯示牙橋模型" } },
+  cosmetic: { src: "/images/service-cosmetic-shade-consultation.webp", w: 1600, h: 900, alt: { en: "Dentist holding a shade guide beside a smiling patient holding a clear aligner", zh: "牙醫拿著比色板，微笑的病人手持隱形牙套" } },
+  surgical: { src: "/images/service-surgical-examination.webp", w: 1600, h: 900, alt: { en: "Dentist wearing loupes examining a patient's gums and teeth", zh: "牙醫配戴放大鏡為病人檢查牙齦及牙齒" } },
+  implant: { src: "/images/service-implant-crown-placement.webp", w: 1600, h: 900, alt: { en: "Dentist placing a crown on an implant in a dental model", zh: "牙醫在牙齒模型上為植體安裝牙冠" } },
 };
 
 export function ServicePage({ service, lang }: { service: ServiceKey; lang: Lang }) {
@@ -22,7 +22,7 @@ export function ServicePage({ service, lang }: { service: ServiceKey; lang: Lang
 
   return (
     <>
-      <PageHeader page={service} lang={lang} image={{ src: HERO[service], alt: L.heroAlt }}>
+      <PageHeader page={service} lang={lang} image={{ src: HERO[service].src, alt: HERO[service].alt[lang] }}>
         <nav aria-label={L.onPage} className="mt-8">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">{L.onPage}</p>
           <ul className="mt-3 flex flex-wrap gap-2">

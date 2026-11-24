@@ -254,7 +254,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
               body: "Dental crowns and bridges are custom restorations designed to restore the form and function of damaged or missing teeth with a durable, natural-looking result.",
             },
           ],
-          image: { src: "/images/tooth-colored-fillings.webp", alt: "Close-up of a tooth-coloured composite filling being placed on a molar", w: 560, h: 420 },
+          image: { src: "/images/tooth-coloured-filling-restoration.webp", alt: "Tooth-coloured composite being placed on a front tooth with a clear matrix", w: 1600, h: 900 },
         },
         {
           id: "endodontics",
@@ -263,7 +263,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             "Endodontic treatment, commonly known as a root canal, removes infected or damaged pulp from inside the tooth, then cleans and seals the tooth's interior.",
             "The procedure helps relieve pain, save the natural tooth and prevent further infection.",
           ],
-          image: { src: "/images/root-canal-endodontics.webp", alt: "Clear tooth model showing the root canal and nerve", w: 560, h: 420 },
+          image: { src: "/images/root-canal-microscope.webp", alt: "Dentist working under a dental microscope on a root canal tooth model", w: 1600, h: 900 },
         },
         {
           id: "prosthodontics",
@@ -271,7 +271,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "We offer prosthodontic solutions such as removable partial dentures, complete dentures and custom night guards, among others.",
           ],
-          image: { src: "/images/crown-bridge.webp", alt: "Ceramic dental bridge placed over prepared teeth on a model", w: 560, h: 420 },
+          image: { src: "/images/ceramic-crown-model.webp", alt: "Ceramic crown being placed over a prepared tooth on a dental model", w: 1536, h: 1024 },
         },
       ],
     },
@@ -296,19 +296,19 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             { title: "牙齒顏色填充", body: "牙齒顏色填充物（又稱複合樹脂填充物）能與天然牙色自然融合，以低調美觀的方式修復蛀牙。" },
             { title: "牙冠／牙橋", body: "牙冠和牙橋是度身訂造的修復方案，用以恢復受損或缺失牙齒的形態與功能，耐用且外觀自然。" },
           ],
-          image: { src: "/images/tooth-colored-fillings.webp", alt: "臼齒上牙齒顏色樹脂填充的特寫", w: 560, h: 420 },
+          image: { src: "/images/tooth-coloured-filling-restoration.webp", alt: "以透明牙模為門牙填補牙齒顏色樹脂", w: 1600, h: 900 },
         },
         {
           id: "endodontics",
           title: "根管治療",
           body: ["牙髓治療，一般稱為根管治療，是清除牙齒內受感染或受損的牙髓，再徹底清潔並密封牙齒內部。", "此治療有助緩解疼痛、保留天然牙齒，並防止感染進一步擴散。"],
-          image: { src: "/images/root-canal-endodontics.webp", alt: "展示牙根管與神經的透明牙齒模型", w: 560, h: 420 },
+          image: { src: "/images/root-canal-microscope.webp", alt: "牙醫在顯微鏡下操作根管治療牙齒模型", w: 1600, h: 900 },
         },
         {
           id: "prosthodontics",
           title: "假牙及護齒器（義齒修復）",
           body: ["我們提供可拆式局部假牙、全口假牙、定制夜間護齒器等多種義齒修復方案。"],
-          image: { src: "/images/crown-bridge.webp", alt: "放在牙齒模型上的陶瓷牙橋", w: 560, h: 420 },
+          image: { src: "/images/ceramic-crown-model.webp", alt: "在牙齒模型上將陶瓷牙冠套於已修整的牙齒", w: 1536, h: 1024 },
         },
       ],
     },
@@ -316,7 +316,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
   cosmetic: {
     en: {
       card: "Orthodontic treatment, Bioclear, cosmetic Botox and take-home teeth whitening.",
-      image: "/images/teeth-whitening-tray.webp",
+      image: "/images/cosmetic-clear-aligner-smile.webp",
       sections: [
         {
           id: "orthodontic-treatment",
@@ -333,7 +333,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "The Bioclear system is a minimally invasive approach to cosmetic dentistry. It uses modern dental materials and techniques to address concerns such as gaps, chips and discolouration without extensive tooth reduction.",
           ],
-          image: { src: "/images/bioclear-treatment.webp", alt: "Clear Bioclear matrix fitted over a front tooth", w: 560, h: 420 },
+          image: { src: "/images/bioclear-matrix-restoration.webp", alt: "Clear Bioclear matrix around a front tooth during a composite restoration", w: 1536, h: 1024 },
         },
         {
           id: "botox",
@@ -350,13 +350,13 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "We offer customized take-home whitening kits. With custom-fitted trays and professional-grade whitening gel, take-home kits brighten your smile gradually and conveniently at home.",
           ],
-          image: { src: "/images/teeth-whitening-tray.webp", alt: "Custom clear whitening trays with whitening gel syringe", w: 560, h: 420 },
+          image: { src: "/images/teeth-whitening-gel-tray.webp", alt: "Dentist filling a custom whitening tray with gel for a smiling patient", w: 1600, h: 900 },
         },
       ],
     },
     zh: {
       card: "牙齒矯正、Bioclear、肉毒桿菌素 (Botox) 及居家牙齒美白。",
-      image: "/images/teeth-whitening-tray.webp",
+      image: "/images/cosmetic-clear-aligner-smile.webp",
       sections: [
         {
           id: "orthodontic-treatment",
@@ -371,7 +371,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           id: "bioclear",
           title: "Bioclear",
           body: ["Bioclear 系統是一種微創的美容牙科方法，運用先進的牙科材料與技術，處理牙縫、缺角及變色等問題，而無需大幅磨除牙齒。"],
-          image: { src: "/images/bioclear-treatment.webp", alt: "套在門牙上的 Bioclear 透明牙模", w: 560, h: 420 },
+          image: { src: "/images/bioclear-matrix-restoration.webp", alt: "門牙進行樹脂修復時使用的 Bioclear 透明牙模", w: 1536, h: 1024 },
         },
         {
           id: "botox",
@@ -386,7 +386,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           id: "teeth-whitening",
           title: "牙齒美白",
           body: ["我們為患者提供定制的居家美白套裝。配合度身訂造的牙托及專業級美白凝膠，讓您在家中輕鬆、逐步地亮白笑容。"],
-          image: { src: "/images/teeth-whitening-tray.webp", alt: "定制透明美白牙托及美白凝膠", w: 560, h: 420 },
+          image: { src: "/images/teeth-whitening-gel-tray.webp", alt: "牙醫為微笑的病人在定制美白牙托注入美白凝膠", w: 1600, h: 900 },
         },
       ],
     },
@@ -394,7 +394,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
   surgical: {
     en: {
       card: "Periodontal deep cleaning, gum and bone grafting, flap surgery and wisdom tooth extraction.",
-      image: "/images/wisdom-tooth-xray.webp",
+      image: "/images/service-surgical-examination.webp",
       sections: [
         {
           id: "periodontics",
@@ -435,7 +435,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
     },
     zh: {
       card: "牙周深層清潔、牙齦及骨移植、牙周瓣手術及智齒拔除。",
-      image: "/images/wisdom-tooth-xray.webp",
+      image: "/images/service-surgical-examination.webp",
       sections: [
         {
           id: "periodontics",

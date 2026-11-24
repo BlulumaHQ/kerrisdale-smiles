@@ -611,3 +611,89 @@ export const FAQS: Record<Lang, Faq[]> = {
     },
   ],
 };
+
+
+/* ---------- CDCP page details (from the clinic's CDCP notice) ---------- */
+export const CDCP_DETAILS = {
+  en: {
+    download: {
+      title: "Printable CDCP notice",
+      body: "The same information as a one-page bilingual notice (English / 中文) to save or print.",
+      button: "Download PDF",
+      meta: "PDF · 1.1 MB",
+      alt: "Preview of the clinic's bilingual CDCP notice",
+    },
+    eligibility: {
+      eyebrow: "01 · Who can apply",
+      title: "Who can apply",
+      items: [
+        "No access to dental insurance",
+        "Adjusted family net income under $90,000",
+        "Canadian resident for tax purposes",
+        "Filed your tax return for last year",
+      ],
+    },
+    steps: {
+      eyebrow: "02 · How it works",
+      title: "How it works",
+      items: [
+        { title: "Apply online at canada.ca/dental", note: "All eligible Canadians can now apply. You must apply yourself — our office cannot apply on your behalf." },
+        { title: "Receive your Sun Life welcome package & member card", note: "Usually within about 3 months." },
+        { title: "Book your visit with us", note: "Appointments can be booked from the coverage start date shown in your welcome letter." },
+      ],
+      link: "Apply at canada.ca/dental",
+    },
+    fees: {
+      eyebrow: "03 · Co-payment examples",
+      title: "Co-payment examples",
+      source: "2024 BCDA & CDCP fee guides",
+      head: { service: "Service", fee: "BCDA fee", pays: "CDCP pays*", you: "You pay" },
+      rows: [
+        { service: "Recall exam", fee: "$39.50", pays: "$32.73", you: "$6.77" },
+        { service: "X-rays (4 films)", fee: "$47.20", pays: "$42.14", you: "$5.06" },
+        { service: "Scaling / root planing (4 units)", fee: "$223.20", pays: "$215.20", you: "$8.00" },
+        { service: "Polish", fee: "$46.40", pays: "$11.15", you: "$35.25" },
+        { service: "Fluoride", fee: "$23.50", pays: "$22.40", you: "$1.10" },
+      ],
+      note: "* CDCP coverage varies by adjusted family net income; amounts shown assume 100% coverage. Fee guides are updated yearly, so actual amounts may differ. Dr. Joyce Wu Dental Kerrisdale reserves the right of final interpretation.",
+    },
+  },
+  zh: {
+    download: {
+      title: "可列印的 CDCP 通告",
+      body: "以上資料的中英對照單頁版本，方便儲存或列印。",
+      button: "下載 PDF",
+      meta: "PDF · 1.1 MB",
+      alt: "本診所中英對照 CDCP 通告預覽",
+    },
+    eligibility: {
+      eyebrow: "01 · 申請資格",
+      title: "申請資格",
+      items: ["沒有任何形式的牙科保險", "家庭調整後淨收入低於 $90,000", "為加拿大納稅居民", "已完成去年的個人所得稅申報"],
+    },
+    steps: {
+      eyebrow: "02 · 申請流程",
+      title: "申請流程",
+      items: [
+        { title: "到加拿大政府官網 canada.ca/dental 送交申請", note: "須由本人自行申請，牙醫診所無法代為辦理。" },
+        { title: "審核通過後，將收到 Sun Life 寄發的迎賓信及會員卡", note: "約需 3 個月。" },
+        { title: "收到會員卡後，即可與我們預約", note: "請於迎賓信上的保險生效日後再預約。" },
+      ],
+      link: "前往 canada.ca/dental 申請",
+    },
+    fees: {
+      eyebrow: "03 · 自付額參考",
+      title: "自付額參考",
+      source: "2024 BCDA 及 CDCP 收費指南",
+      head: { service: "項目", fee: "診所收費", pays: "保險給付*", you: "自付額" },
+      rows: [
+        { service: "檢查", fee: "$39.50", pays: "$32.73", you: "$6.77" },
+        { service: "X 光片（4 張）", fee: "$47.20", pays: "$42.14", you: "$5.06" },
+        { service: "洗牙（4 單位）", fee: "$223.20", pays: "$215.20", you: "$8.00" },
+        { service: "拋光", fee: "$46.40", pays: "$11.15", you: "$35.25" },
+        { service: "塗氟", fee: "$23.50", pays: "$22.40", you: "$1.10" },
+      ],
+      note: "* 實際給付比例依家庭淨收入而定，上表以 100% 給付計算。收費標準每年調整，金額僅供參考。本診所保留最終解釋權。",
+    },
+  },
+};

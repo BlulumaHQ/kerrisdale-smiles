@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Banknote, CalendarX, ExternalLink, HeartHandshake, ShieldCheck } from "lucide-react";
-import { FAQS } from "@/content/pages";
+import { ArrowRight, Banknote, CalendarX, Check, Download, ExternalLink, HeartHandshake, ShieldCheck } from "lucide-react";
+import { CDCP_DETAILS, FAQS } from "@/content/pages";
 import { CLINIC, DOCTORS, routeTo, UI, type Lang } from "@/content/site";
 import { buttonStyles } from "@/components/site/Button";
-import { ContactSection, CtaBand, FaqList, PageHeader } from "@/components/site/Blocks";
+import { ContactSection, CtaBand, FaqList, PageHeader, SectionHeading } from "@/components/site/Blocks";
 import { cn } from "@/lib/utils";
 
 /* ---------- About ---------- */
@@ -213,25 +213,20 @@ export function CdcpPage({ lang }: { lang: Lang }) {
           "If you are enrolled, contact our office to arrange your visit, and bring your plan details to your appointment.",
         ],
         gov: "Official Government of Canada CDCP information",
-        poster: "Our clinic's CDCP notice",
-        posterAlt: "Bilingual clinic notice announcing that Dr. Joyce Wu Dental Kerrisdale is accepting the Canadian Dental Care Plan, with application steps",
-        posterNote: "Notice as previously published by the clinic. For current eligibility and co-payment details, refer to the Government of Canada.",
         about: "Insurance & office policies",
       }
     : {
         what: "在本診所使用 CDCP",
         body: ["我們診所欣然接受加拿大牙科護理計劃（CDCP）。", "申請資格、登記及保障範圍均由加拿大政府訂定。有關申請程序及資格標準，請參閱官方 CDCP 資訊。", "如您已登記參加，歡迎聯絡我們安排看診，並於看診時攜帶您的計劃資料。"],
         gov: "加拿大政府官方 CDCP 資訊（英文）",
-        poster: "本診所的 CDCP 通告",
-        posterAlt: "Dr. Joyce Wu Dental Kerrisdale 接受加拿大全民牙科保險計劃的中英文通告及申請步驟",
-        posterNote: "此為診所過往發佈的通告。最新資格及共付額資料，請以加拿大政府公佈為準。",
         about: "保險及診所政策",
       };
+  const D = CDCP_DETAILS[lang];
   return (
     <>
       <PageHeader page="cdcp" lang={lang} />
-      <section className="py-16 md:py-24">
-        <div className="container-page grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+      <section className="py-16 md:py-20">
+        <div className="container-page grid items-center gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
           <div>
             <h2 className="font-display text-3xl font-semibold">{L.what}</h2>
             <div className="rule-champagne mt-5 w-16" />
@@ -249,14 +244,88 @@ export function CdcpPage({ lang }: { lang: Lang }) {
               </Link>
             </div>
           </div>
-          <figure className="rounded-2xl border bg-surface p-4">
-            <img src="/images/cdcp-announcement-2026.webp" alt={L.posterAlt} width={1080} height={1920} loading="lazy" className="mx-auto max-h-[720px] w-auto rounded-lg" />
-            <figcaption className="mt-4 px-2 text-sm text-muted-foreground">
-              <span className="font-medium text-primary-deep">{L.poster}.</span> {L.posterNote}
-            </figcaption>
-          </figure>
+          <a href="/downloads/joyce-wu-dental-cdcp-notice.pdf" download className="group flex items-center gap-5 rounded-2xl border bg-surface p-5 shadow-soft transition-colors hover:border-primary/40">
+            <img src="/images/cdcp-announcement-2026.webp" alt={D.download.alt} width={1080} height={1920} loading="lazy" className="h-32 w-auto shrink-0 rounded-md border sm:h-40" />
+            <span className="flex flex-col">
+              <span className="font-display text-xl font-semibold text-primary-deep">{D.download.title}</span>
+              <span className="mt-2 text-sm leading-relaxed text-muted-foreground">{D.download.body}</span>
+              <span className="mt-4 inline-flex items-center gap-2 whitespace-nowrap text-sm font-semibold text-primary group-hover:underline">
+                <Download className="size-4" aria-hidden /> {D.download.button}
+              </span>
+              <span className="mt-1 text-xs text-muted-foreground">{D.download.meta}</span>
+            </span>
+          </a>
         </div>
       </section>
+
+      <section className="bg-secondary py-16 md:py-20" aria-labelledby="cdcp-eligibility">
+        <div className="container-page">
+          <div id="cdcp-eligibility"><SectionHeading eyebrow={D.eligibility.eyebrow} title={D.eligibility.title} /></div>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {D.eligibility.items.map((item) => (
+              <li key={item} className="flex items-start gap-4 rounded-2xl border bg-surface p-6">
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-champagne text-champagne-ink">
+                  <Check className="size-4" aria-hidden />
+                </span>
+                <span className="pt-1.5 font-medium leading-snug text-primary-deep">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20" aria-labelledby="cdcp-steps">
+        <div className="container-page">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div id="cdcp-steps"><SectionHeading eyebrow={D.steps.eyebrow} title={D.steps.title} /></div>
+            <a href={CLINIC.cdcpGovUrlEn} target="_blank" rel="noopener noreferrer" className={buttonStyles({ variant: "outline", size: "sm" })}>
+              {D.steps.link} <ExternalLink className="size-4" aria-hidden />
+            </a>
+          </div>
+          <ol className="mt-10 grid gap-8 md:grid-cols-3 md:gap-10">
+            {D.steps.items.map((s, i) => (
+              <li key={s.title} className="border-t border-champagne/60 pt-6">
+                <span className="flex size-11 items-center justify-center rounded-full bg-primary font-display text-lg font-semibold text-primary-foreground">{i + 1}</span>
+                <h3 className="mt-5 font-display text-xl font-semibold leading-snug">{s.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{s.note}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="bg-secondary py-16 md:py-20" aria-labelledby="cdcp-fees">
+        <div className="container-page">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div id="cdcp-fees"><SectionHeading eyebrow={D.fees.eyebrow} title={D.fees.title} /></div>
+            <p className="text-sm text-muted-foreground">{D.fees.source}</p>
+          </div>
+          <div className="mt-10 overflow-x-auto rounded-2xl border bg-surface">
+            <table className="w-full min-w-[560px] text-left">
+              <thead className="bg-primary text-primary-foreground">
+                <tr>
+                  <th scope="col" className="px-6 py-4 text-sm font-semibold">{D.fees.head.service}</th>
+                  <th scope="col" className="px-6 py-4 text-right text-sm font-semibold">{D.fees.head.fee}</th>
+                  <th scope="col" className="px-6 py-4 text-right text-sm font-semibold">{D.fees.head.pays}</th>
+                  <th scope="col" className="px-6 py-4 text-right text-sm font-semibold text-champagne">{D.fees.head.you}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                {D.fees.rows.map((r) => (
+                  <tr key={r.service}>
+                    <th scope="row" className="px-6 py-4 font-medium text-primary-deep">{r.service}</th>
+                    <td className="px-6 py-4 text-right tabular-nums text-muted-foreground">{r.fee}</td>
+                    <td className="px-6 py-4 text-right tabular-nums text-muted-foreground">{r.pays}</td>
+                    <td className="px-6 py-4 text-right font-semibold tabular-nums text-primary-deep">{r.you}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-5 max-w-4xl text-xs leading-relaxed text-muted-foreground">{D.fees.note}</p>
+        </div>
+      </section>
+
       <CtaBand lang={lang} />
     </>
   );

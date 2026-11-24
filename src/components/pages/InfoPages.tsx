@@ -58,7 +58,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
   const a = ABOUT[lang];
   return (
     <>
-      <PageHeader page="about" lang={lang} image={{ src: "/images/clinic-front-desk.webp", alt: lang === "en" ? "Front desk at Dr. Joyce Wu Dental Kerrisdale" : "診所接待處" }} />
+      <PageHeader page="about" lang={lang} image={{ src: "/images/clinic-reception-front-desk.webp", alt: lang === "en" ? "Front desk at Dr. Joyce Wu Dental Kerrisdale" : "診所接待處" }} />
       <section className="py-16 md:py-24">
         <div className="container-page">
           <p className="eyebrow">{a.policy}</p>
@@ -144,7 +144,7 @@ export function TeamPage({ lang }: { lang: Lang }) {
     : { implant: "為患者提供 Nobel Biocare 植體。", implantLink: "植牙服務", group: "Dr. Miles Chu、Dr. Cindy Wang 及 Dr. Joyce Wu 在診所內" };
   return (
     <>
-      <PageHeader page="team" lang={lang} image={{ src: "/images/dental-team-group.webp", alt: L.group }} />
+      <PageHeader page="team" lang={lang} image={{ src: "/images/dental-team-group-2026.webp", alt: L.group }} />
       <section className="py-16 md:py-24">
         <div className="container-page">
           <ul className="grid grid-cols-1 gap-8 min-[480px]:grid-cols-2 lg:grid-cols-4">
@@ -250,7 +250,7 @@ export function CdcpPage({ lang }: { lang: Lang }) {
             </div>
           </div>
           <figure className="rounded-2xl border bg-surface p-4">
-            <img src="/images/cdcp-announcement.webp" alt={L.posterAlt} width={900} height={1600} loading="lazy" className="mx-auto max-h-[720px] w-auto rounded-lg" />
+            <img src="/images/cdcp-announcement-2026.webp" alt={L.posterAlt} width={1080} height={1920} loading="lazy" className="mx-auto max-h-[720px] w-auto rounded-lg" />
             <figcaption className="mt-4 px-2 text-sm text-muted-foreground">
               <span className="font-medium text-primary-deep">{L.poster}.</span> {L.posterNote}
             </figcaption>

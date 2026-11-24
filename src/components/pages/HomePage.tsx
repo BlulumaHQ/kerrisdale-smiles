@@ -98,10 +98,10 @@ export function HomePage({ lang }: { lang: Lang }) {
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-primary-deep">
         <img
-          src="/images/clinic-reception-kerrisdale.webp"
+          src="/images/clinic-reception-front-desk.webp"
           alt={lang === "en" ? "Reception desk at Dr. Joyce Wu Dental Kerrisdale" : "Dr. Joyce Wu Dental Kerrisdale 診所接待處"}
-          width={1448}
-          height={1086}
+          width={1440}
+          height={1092}
           fetchPriority="high"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]"
         />

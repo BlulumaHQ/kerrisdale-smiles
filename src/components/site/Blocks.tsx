@@ -270,7 +270,7 @@ export function ContactSection({ lang, heading = true, defaultService }: { lang:
     ? { eyebrow: "Visit Us", title: "Find Us in Kerrisdale", body: "We're on Balsam Street in Kerrisdale, Vancouver. Call, email or send an inquiry to arrange your visit." }
     : { eyebrow: "歡迎蒞臨", title: "位於 Kerrisdale 的診所", body: "我們位於溫哥華 Kerrisdale 的 Balsam Street。歡迎致電、發送電郵或提交查詢以安排看診。" };
   return (
-    <section className="bg-background py-20 md:py-28" aria-labelledby={heading ? "visit-title" : undefined}>
+    <section className="bg-background py-16 md:py-24" aria-labelledby={heading ? "visit-title" : undefined}>
       <div className="container-page">
         {heading && (
           <div className="mb-12" id="visit-title">
@@ -293,19 +293,19 @@ export function ContactSection({ lang, heading = true, defaultService }: { lang:
                 </a>
               </div>
             </div>
-            <div className="rounded-2xl border bg-surface p-7 md:p-9">
+            <div className="flex-1 rounded-2xl border bg-surface p-7 md:p-9">
               <h3 className="flex items-center gap-2 font-display text-xl font-semibold">
                 <Clock className="size-5 text-champagne-ink" aria-hidden /> {ui.hours}
               </h3>
               <HoursList lang={lang} className="mt-4" />
               <p className="mt-4 text-xs text-muted-foreground">{ui.hoursNote}</p>
             </div>
-            <MapEmbed lang={lang} className="min-h-[300px] flex-1" />
           </div>
           <div id="inquiry" className="scroll-mt-28">
             <InquiryForm lang={lang} defaultService={defaultService} />
           </div>
         </div>
+        <MapEmbed lang={lang} className="mt-8 h-[360px] min-h-0 md:h-[440px]" />
       </div>
     </section>
   );

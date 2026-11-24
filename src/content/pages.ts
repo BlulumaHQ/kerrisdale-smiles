@@ -238,7 +238,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             "Professional cleanings performed by dental hygienists reach areas that are difficult to clean with regular brushing and flossing alone, so buildup can be thoroughly removed.",
             "Regular cleanings also let your dentist spot early signs of problems such as decay or gum inflammation, so they can be addressed before they become more serious. Keeping up with cleanings helps protect both your smile and your long-term oral health.",
           ],
-          image: { src: "/images/teeth-cleaning.webp", alt: "Illustration of a professional dental cleaning removing buildup from teeth", w: 585, h: 444 },
+          image: { src: "/images/teeth-cleaning.webp", alt: "Hygienist performing a professional dental cleaning on a smiling patient", w: 1448, h: 1086 },
         },
         {
           id: "restorative-dentistry",
@@ -254,7 +254,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
               body: "Dental crowns and bridges are custom restorations designed to restore the form and function of damaged or missing teeth with a durable, natural-looking result.",
             },
           ],
-          image: { src: "/images/tooth-colored-fillings.webp", alt: "Comparison of metal fillings and tooth-coloured composite fillings", w: 585, h: 444 },
+          image: { src: "/images/tooth-colored-fillings.webp", alt: "Close-up of a tooth-coloured composite filling being placed on a molar", w: 560, h: 420 },
         },
         {
           id: "endodontics",
@@ -263,7 +263,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             "Endodontic treatment, commonly known as a root canal, removes infected or damaged pulp from inside the tooth, then cleans and seals the tooth's interior.",
             "The procedure helps relieve pain, save the natural tooth and prevent further infection.",
           ],
-          image: { src: "/images/root-canal-endodontics.webp", alt: "Illustrated stages of root canal treatment", w: 585, h: 444 },
+          image: { src: "/images/root-canal-endodontics.webp", alt: "Clear tooth model showing the root canal and nerve", w: 560, h: 420 },
         },
         {
           id: "prosthodontics",
@@ -271,7 +271,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "We offer prosthodontic solutions such as removable partial dentures, complete dentures and custom night guards, among others.",
           ],
-          image: { src: "/images/crown-bridge.webp", alt: "Ceramic dental bridge", w: 585, h: 444 },
+          image: { src: "/images/crown-bridge.webp", alt: "Ceramic dental bridge placed over prepared teeth on a model", w: 560, h: 420 },
         },
       ],
     },
@@ -286,7 +286,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             "由牙科衛生員進行的專業清潔，可以處理日常刷牙及使用牙線難以清潔的位置，徹底清除牙垢。",
             "定期清潔亦讓牙醫及早發現蛀牙或牙齦發炎等問題的徵兆，在問題惡化前及時處理。持續定期洗牙，有助長期保持笑容及整體口腔健康。",
           ],
-          image: { src: "/images/teeth-cleaning.webp", alt: "專業洗牙清除牙垢的示意圖", w: 585, h: 444 },
+          image: { src: "/images/teeth-cleaning.webp", alt: "牙科衛生師為微笑的病人進行專業洗牙", w: 1448, h: 1086 },
         },
         {
           id: "restorative-dentistry",
@@ -296,19 +296,19 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             { title: "牙齒顏色填充", body: "牙齒顏色填充物（又稱複合樹脂填充物）能與天然牙色自然融合，以低調美觀的方式修復蛀牙。" },
             { title: "牙冠／牙橋", body: "牙冠和牙橋是度身訂造的修復方案，用以恢復受損或缺失牙齒的形態與功能，耐用且外觀自然。" },
           ],
-          image: { src: "/images/tooth-colored-fillings.webp", alt: "金屬填充與牙齒顏色填充的對比", w: 585, h: 444 },
+          image: { src: "/images/tooth-colored-fillings.webp", alt: "臼齒上牙齒顏色樹脂填充的特寫", w: 560, h: 420 },
         },
         {
           id: "endodontics",
           title: "根管治療",
           body: ["牙髓治療，一般稱為根管治療，是清除牙齒內受感染或受損的牙髓，再徹底清潔並密封牙齒內部。", "此治療有助緩解疼痛、保留天然牙齒，並防止感染進一步擴散。"],
-          image: { src: "/images/root-canal-endodontics.webp", alt: "根管治療步驟示意圖", w: 585, h: 444 },
+          image: { src: "/images/root-canal-endodontics.webp", alt: "展示牙根管與神經的透明牙齒模型", w: 560, h: 420 },
         },
         {
           id: "prosthodontics",
           title: "假牙及護齒器（義齒修復）",
           body: ["我們提供可拆式局部假牙、全口假牙、定制夜間護齒器等多種義齒修復方案。"],
-          image: { src: "/images/crown-bridge.webp", alt: "陶瓷牙橋", w: 585, h: 444 },
+          image: { src: "/images/crown-bridge.webp", alt: "放在牙齒模型上的陶瓷牙橋", w: 560, h: 420 },
         },
       ],
     },
@@ -325,7 +325,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             "Orthodontic treatment corrects misaligned teeth and bite issues, improving both oral function and appearance. Whether through traditional braces or clear aligner systems, treatment can help patients achieve a straighter smile with improved bite alignment.",
             "Our doctors have extensive experience with both traditional braces and clear aligner systems. Contact us to find out which option may be right for you.",
           ],
-          image: { src: "/images/orthodontic-treatment.webp", alt: "Invisalign provider logo with before and after photos of aligner treatment", w: 593, h: 449 },
+          image: { src: "/images/orthodontic-treatment.webp", alt: "Patient smiling while a dentist shows her clear aligners", w: 1448, h: 1086 },
         },
         {
           id: "bioclear",
@@ -333,7 +333,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "The Bioclear system is a minimally invasive approach to cosmetic dentistry. It uses modern dental materials and techniques to address concerns such as gaps, chips and discolouration without extensive tooth reduction.",
           ],
-          image: { src: "/images/bioclear-treatment.webp", alt: "Front teeth before and after Bioclear treatment", w: 585, h: 766 },
+          image: { src: "/images/bioclear-treatment.webp", alt: "Clear Bioclear matrix fitted over a front tooth", w: 560, h: 420 },
         },
         {
           id: "botox",
@@ -350,7 +350,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "We offer customized take-home whitening kits. With custom-fitted trays and professional-grade whitening gel, take-home kits brighten your smile gradually and conveniently at home.",
           ],
-          image: { src: "/images/teeth-whitening-tray.webp", alt: "Custom clear whitening tray being fitted", w: 585, h: 444 },
+          image: { src: "/images/teeth-whitening-tray.webp", alt: "Custom clear whitening trays with whitening gel syringe", w: 560, h: 420 },
         },
       ],
     },
@@ -365,13 +365,13 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
             "牙齒矯正治療旨在改善牙齒不齊及咬合問題，提升口腔功能與美觀。無論是傳統牙套或透明矯正器，都能幫助患者獲得更整齊的牙齒和更理想的咬合。",
             "我們的醫師在傳統牙套及透明矯正器方面均有豐富經驗。歡迎聯絡我們，了解哪種方案可能適合您。",
           ],
-          image: { src: "/images/orthodontic-treatment.webp", alt: "Invisalign 認可標誌及隱形矯正前後對比照片", w: 593, h: 449 },
+          image: { src: "/images/orthodontic-treatment.webp", alt: "牙醫向微笑的病人展示隱形牙套", w: 1448, h: 1086 },
         },
         {
           id: "bioclear",
           title: "Bioclear",
           body: ["Bioclear 系統是一種微創的美容牙科方法，運用先進的牙科材料與技術，處理牙縫、缺角及變色等問題，而無需大幅磨除牙齒。"],
-          image: { src: "/images/bioclear-treatment.webp", alt: "Bioclear 治療前後的門牙對比", w: 585, h: 766 },
+          image: { src: "/images/bioclear-treatment.webp", alt: "套在門牙上的 Bioclear 透明牙模", w: 560, h: 420 },
         },
         {
           id: "botox",
@@ -386,7 +386,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           id: "teeth-whitening",
           title: "牙齒美白",
           body: ["我們為患者提供定制的居家美白套裝。配合度身訂造的牙托及專業級美白凝膠，讓您在家中輕鬆、逐步地亮白笑容。"],
-          image: { src: "/images/teeth-whitening-tray.webp", alt: "定制透明美白牙托", w: 585, h: 444 },
+          image: { src: "/images/teeth-whitening-tray.webp", alt: "定制透明美白牙托及美白凝膠", w: 560, h: 420 },
         },
       ],
     },
@@ -473,7 +473,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           body: [
             "Dental implants are artificial tooth roots made of biocompatible materials such as titanium. They are surgically placed in the jawbone to support dental prosthetics such as crowns, bridges or dentures.",
           ],
-          image: { src: "/images/dental-implant-nobel-biocare.webp", alt: "Cross-section illustration of a dental implant with the Nobel Biocare logo", w: 585, h: 444 },
+          image: { src: "/images/dental-implant-nobel-biocare.webp", alt: "Dentist explaining a dental implant using a cross-section model", w: 1448, h: 1086 },
         },
         {
           id: "purpose",
@@ -508,7 +508,7 @@ export const SERVICES: Record<ServiceKey, Record<Lang, ServiceContent>> = {
           id: "what-are-dental-implants",
           title: "甚麼是植牙？",
           body: ["牙齒植體是以鈦等生物相容材料製成的人造牙根，經手術植入顎骨，用以支撐牙冠、牙橋或假牙等修復體。"],
-          image: { src: "/images/dental-implant-nobel-biocare.webp", alt: "植牙剖面示意圖及 Nobel Biocare 標誌", w: 585, h: 444 },
+          image: { src: "/images/dental-implant-nobel-biocare.webp", alt: "牙醫以植牙剖面模型向病人講解", w: 1448, h: 1086 },
         },
         {
           id: "purpose",

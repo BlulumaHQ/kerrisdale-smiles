@@ -100,8 +100,8 @@ export function HomePage({ lang }: { lang: Lang }) {
         <img
           src="/images/clinic-reception-kerrisdale.webp"
           alt={lang === "en" ? "Reception desk at Dr. Joyce Wu Dental Kerrisdale" : "Dr. Joyce Wu Dental Kerrisdale 診所接待處"}
-          width={1200}
-          height={630}
+          width={1448}
+          height={1086}
           fetchPriority="high"
           className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]"
         />
@@ -127,8 +127,8 @@ export function HomePage({ lang }: { lang: Lang }) {
       <section className="py-20 md:py-28">
         <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="relative">
-            <img src="/images/clinic-waiting-area.webp" alt={lang === "en" ? "Bright patient waiting area with large windows" : "光線充足的候診區"} width={585} height={444} loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover" />
-            <img src="/images/clinic-treatment-room.webp" alt={lang === "en" ? "Treatment room with dental chair" : "設有牙科椅的治療室"} width={585} height={444} loading="lazy" className="absolute -bottom-10 -right-4 hidden w-[46%] rounded-xl border-4 border-background object-cover shadow-lift sm:block md:-right-8" />
+            <img src="/images/clinic-waiting-area.webp" alt={lang === "en" ? "Bright patient waiting area with large windows" : "光線充足的候診區"} width={1448} height={1086} loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+            <img src="/images/clinic-treatment-room.webp" alt={lang === "en" ? "Treatment room with dental chair" : "設有牙科椅的治療室"} width={1448} height={1086} loading="lazy" className="absolute -bottom-10 -right-4 hidden w-[46%] rounded-xl border-4 border-background object-cover shadow-lift sm:block md:-right-8" />
           </div>
           <div>
             <p className="eyebrow">{c.welcomeEyebrow}</p>
@@ -192,7 +192,7 @@ export function HomePage({ lang }: { lang: Lang }) {
         <div className="container-page grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
             <SectionHeading eyebrow={c.whyEyebrow} title={c.whyTitle} dark />
-            <img src="/images/clinic-treatment-room-map.webp" alt={lang === "en" ? "Treatment room with world-map wall feature" : "設有世界地圖牆飾的治療室"} width={585} height={444} loading="lazy" className="mt-10 aspect-[4/3] w-full rounded-2xl object-cover" />
+            <img src="/images/clinic-treatment-room-map.webp" alt={lang === "en" ? "Treatment room with world-map wall feature" : "設有世界地圖牆飾的治療室"} width={1448} height={1086} loading="lazy" className="mt-10 aspect-[4/3] w-full rounded-2xl object-cover" />
           </div>
           <ul className="grid gap-px self-center overflow-hidden rounded-2xl bg-border-dark sm:grid-cols-2">
             {c.why.map((w) => (

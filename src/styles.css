@@ -248,3 +248,19 @@
     animation-duration: 0.01ms !important;
   }
 }
+
+/* ---- Joyce Wu Dental logo (Modern Sans wordmark) ---- */
+.jwd-logo { gap: 12px; font-family: "Manrope", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif; }
+.jwd-logo .logo-mark { width: 54px; height: 54px; }
+.jwd-logo-name { font-size: 23px; line-height: 1; letter-spacing: -0.025em; color: #0f503c; }
+.jwd-logo-dental { color: var(--champagne-ink); }
+.jwd-logo-location { margin-top: 7px; font-size: 10px; font-weight: 600; letter-spacing: 0.3em; line-height: 1.2; color: #4f6f64; }
+.jwd-logo--dark .jwd-logo-name { color: var(--on-dark); }
+.jwd-logo--dark .jwd-logo-dental { color: #bfa06b; }
+.jwd-logo--dark .jwd-logo-location { color: var(--on-dark-muted); }
+.jwd-logo--dark .logo-mark { width: 58px; height: 58px; }
+@media (max-width: 767px) {
+  .jwd-logo .logo-mark { width: 44px; height: 44px; }
+  .jwd-logo-name { font-size: 19px; }
+  .jwd-logo-location { margin-top: 5px; font-size: 8.5px; letter-spacing: 0.24em; }
+}

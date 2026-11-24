@@ -38,9 +38,35 @@ function NotFoundComponent() {
   );
 }
 
+const CHUNK_ERROR = /Failed to fetch dynamically imported module|Importing a module script failed|error loading dynamically imported module|Unable to preload CSS/i;
+
+/** After a new deploy, an old page may ask for bundles that no longer exist: reload once to get the new ones. */
+function reloadOnceForStaleBundle(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const key = "jwd-chunk-reload";
+    const last = Number(sessionStorage.getItem(key) ?? 0);
+    if (Date.now() - last < 30_000) return false;
+    sessionStorage.setItem(key, String(Date.now()));
+  } catch {
+    return false;
+  }
+  window.location.reload();
+  return true;
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener("vite:preloadError", (event) => {
+    if (reloadOnceForStaleBundle()) event.preventDefault();
+  });
+}
+
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
+  useEffect(() => {
+    if (CHUNK_ERROR.test(String((error as Error | undefined)?.message ?? error))) reloadOnceForStaleBundle();
+  }, [error]);
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);

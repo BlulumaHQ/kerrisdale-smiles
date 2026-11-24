@@ -141,6 +141,11 @@ export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const drawerRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const [drawerTop, setDrawerTop] = useState<number | undefined>(undefined);
+  useEffect(() => {
+    if (open) setDrawerTop(headerRef.current?.getBoundingClientRect().bottom);
+  }, [open]);
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 12);
@@ -182,7 +187,22 @@ export function SiteHeader() {
   }, [open]);
 
   return (
+    <>
+    <div className="bg-primary-deep text-[13px] text-on-dark-muted">
+      <div className="container-page flex min-h-11 items-center justify-between gap-x-6 py-1.5">
+        <span className="min-w-0 truncate">{lang === "en" ? "5763 Balsam St, Kerrisdale, Vancouver" : "5763 Balsam St，溫哥華 Kerrisdale"}</span>
+        <span className="flex items-center gap-6">
+          <Link to={routeTo("cdcp", lang)} className="hidden transition-colors hover:text-on-dark lg:inline">{lang === "en" ? "Proudly accepting the Canada Dental Care Plan" : "欣然接受加拿大牙科護理計劃"}</Link>
+          <a href={CLINIC.phoneHref} className="hidden items-center gap-1.5 font-medium text-on-dark transition-colors hover:text-champagne sm:inline-flex">
+            <Phone className="size-3.5" aria-hidden />
+            {CLINIC.phoneDisplay.replace("+1 ", "")}
+          </a>
+          <LangSwitch dark className="min-h-8 border-on-dark/25 px-3 text-[13px]" />
+        </span>
+      </div>
+    </div>
     <header
+      ref={headerRef}
       className={cn(
         "sticky top-0 z-40 h-[var(--header-h)] border-b transition-all duration-300",
         scrolled ? "border-border bg-surface/95 shadow-soft backdrop-blur" : "border-transparent bg-background",
@@ -218,15 +238,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <LangSwitch className="hidden sm:inline-flex" />
-          <a
-            href={CLINIC.phoneHref}
-            aria-label={`${ui.call}: ${CLINIC.phoneDisplay}`}
-            className="hidden size-11 items-center justify-center rounded-full border border-primary/20 text-primary-deep transition-colors hover:border-primary hover:bg-surface md:inline-flex 2xl:w-auto 2xl:gap-2 2xl:px-4"
-          >
-            <Phone className="size-4" aria-hidden />
-            <span className="hidden whitespace-nowrap text-sm font-medium 2xl:inline">{CLINIC.phoneDisplay.replace("+1 ", "")}</span>
-          </a>
           <Link to={routeTo("contact", lang)} hash="inquiry" className={cn(buttonStyles({ size: "sm" }), "hidden md:inline-flex")}>
             {ui.request}
           </Link>
@@ -247,6 +258,7 @@ export function SiteHeader() {
       {/* Mobile drawer */}
       <div
         className={cn("fixed inset-0 top-[var(--header-h)] z-40 bg-primary-deep/30 transition-opacity lg:hidden", open ? "opacity-100" : "pointer-events-none opacity-0")}
+        style={drawerTop !== undefined ? { top: drawerTop } : undefined}
         onClick={() => setOpen(false)}
         aria-hidden
       />
@@ -258,6 +270,7 @@ export function SiteHeader() {
         aria-label={ui.menu}
         hidden={!open}
         className="fixed inset-x-0 bottom-0 top-[var(--header-h)] z-50 overflow-y-auto bg-surface lg:hidden"
+        style={drawerTop !== undefined ? { top: drawerTop } : undefined}
       >
         <nav aria-label={ui.menu} className="container-page flex min-h-full flex-col py-6">
           <ul className="divide-y border-y">
@@ -314,5 +327,6 @@ export function SiteHeader() {
         </nav>
       </div>
     </header>
+    </>
   );
 }

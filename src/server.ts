@@ -50,6 +50,14 @@ export default {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
+      // A missing hashed bundle (e.g. requested mid-deploy) must never be cached by
+      // the browser, or every page that needs that chunk stays broken afterwards.
+      if (response.status === 404 && new URL(request.url).pathname.startsWith("/assets/")) {
+        return new Response("Not found", {
+          status: 404,
+          headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" },
+        });
+      }
       return applyPlatformNoindex(request, await normalizeCatastrophicSsrResponse(response));
     } catch (error) {
       console.error(error);
